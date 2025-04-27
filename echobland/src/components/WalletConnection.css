@@ -1,0 +1,163 @@
+.wallet-connection {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.connect-button {
+    padding: 24px 48px;
+    background: linear-gradient(45deg, #4CAF50, #45a049, #3d8b40, #4CAF50);
+    background-size: 300% 300%;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+                0 0 20px rgba(76, 175, 80, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: gradient-shift 3s ease infinite;
+}
+
+.connect-button:hover {
+    background: linear-gradient(45deg, #45a049, #3d8b40, #4CAF50, #45a049);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(76, 175, 80, 0.4);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-selector {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15),
+                0 0 20px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slide-in 0.3s ease-out;
+}
+
+.wallet-option {
+    padding: 20px;
+    background: linear-gradient(45deg, #f8f9fa, #ffffff);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.wallet-option:hover {
+    background: linear-gradient(45deg, #ffffff, #f8f9fa);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.wallet-icon {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.wallet-option:hover .wallet-icon {
+    transform: scale(1.1);
+}
+
+.wallet-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8));
+    padding: 24px 40px;
+    border-radius: 24px;
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2),
+                0 0 20px rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.wallet-info:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
+}
+
+.wallet-name {
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.disconnect-button {
+    padding: 20px 40px;
+    background: linear-gradient(45deg, #f44336, #d32f2f, #b71c1c, #f44336);
+    background-size: 300% 300%;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
+                0 0 20px rgba(244, 67, 54, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: gradient-shift 3s ease infinite;
+}
+
+.disconnect-button:hover {
+    background: linear-gradient(45deg, #d32f2f, #b71c1c, #f44336, #d32f2f);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(244, 67, 54, 0.4);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(76, 175, 80, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+} 

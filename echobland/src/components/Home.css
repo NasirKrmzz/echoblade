@@ -1,0 +1,90 @@
+.home-container {
+    position: fixed;
+    inset: 0;
+    background: url("C:/Users/hp/Desktop/Echobland/Echobland/echobland/src/components/resimler/ChatGPT Image 26 Nis 2025 19_54_36.png") center center/cover no-repeat fixed;
+    display: flex;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.sidebar {
+    width: 300px;
+    background: linear-gradient(135deg, #2d1b4d 0%, #1a0f2e 100%);
+    box-shadow: 0 0 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 64px;
+    z-index: 100;
+    will-change: transform;
+}
+
+.logo-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    margin-bottom: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: left;
+    padding: 16px 48px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s;
+    will-change: transform;
+}
+
+.menu-item:hover {
+    background: rgba(138, 43, 226, 0.1);
+}
+
+.menu-item.active {
+    background: rgba(138, 43, 226, 0.2);
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+    z-index: 50;
+    will-change: transform;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    will-change: transform;
+} 

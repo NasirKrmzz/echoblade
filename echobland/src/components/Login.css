@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: url('C:/Users/hp/Desktop/Echobland/Echobland/echobland/src/components/resimler/ChatGPT Image 26 Nis 2025 19_54_36.png') center center/cover no-repeat fixed;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.login-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 5rem 4rem 4rem 4rem;
+    background: transparent;
+    border-radius: 32px;
+    box-shadow: 0 16px 64px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.2s;
+    backdrop-filter: blur(10px);
+}
+
+.game-title {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 4.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 32px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: #fff;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-form input {
+    padding: 1.1rem 1.3rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.15rem;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.login-form input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.login-form button {
+    padding: 1.1rem 1.3rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.login-form button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.error-message {
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.98rem;
+    margin-bottom: -0.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.fade-in {
+    animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .login-container {
+        max-width: 98vw;
+        margin: 32px 4px;
+        padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    }
+
+    .game-title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-buttons button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-bottom: 2.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-buttons button.active {
+    color: #fff;
+    border-bottom: 2.5px solid #fff;
+}
+
+.tab-buttons button:hover:not(.active) {
+    color: #fff;
+}
+
+/* Wallet Bölümü Stilleri */
+.wallet-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.wallet-connect-btn {
+    background: #3f51b5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+
+.wallet-connect-btn:hover {
+    background: #303f9f;
+}
+
+.wallet-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.wallet-connected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.disconnect-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Divider Stili */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #777;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.divider span {
+    padding: 0 15px;
+}
+
+/* Modal Stilleri */
+.wallet-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.wallet-modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.wallet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.wallet-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.wallet-option:hover {
+    background: #f5f5f5;
+    border-color: #3f51b5;
+}
+
+/* Bağlı durumda giriş butonu */
+.login-form button.connected {
+    background: #4caf50;
+    cursor: default;
+}
